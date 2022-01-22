@@ -2,13 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MovieCard from './MovieCard';
 
-export default class MovieList extends React.Component {
-  render() {
-    const { movies } = this.props;
-    return (
-      movies.map((movie) => <MovieCard key={ movie.title } movie={ movie } />)
-    );
-  }
+export default function MovieList({ movies }) {
+ return (
+    <div className="flex flex-wrap">
+      { movies.map((movie) => <MovieCard key={ movie.title } movie={ movie } />) }
+    </div>
+  );
 }
 
 MovieList.propTypes = {
