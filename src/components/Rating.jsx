@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function Rating({ rating }) {
   return (
-    <div className="rating">{ rating }</div>
+    <div className="rating rounded-full">{ rating }</div>
   );
 }
 

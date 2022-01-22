@@ -4,7 +4,7 @@ import MovieCard from './MovieCard';
 
 export default function MovieList({ movies }) {
  return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap pt-10 px-16 justify-center">
       { movies.map((movie) => <MovieCard key={ movie.title } movie={ movie } />) }
     </div>
   );

@@ -6,12 +6,22 @@ export default function MovieCard({ movie }) {
   const { title, subtitle, storyline, imagePath, rating } = movie;
   
   return (
-    <div className>
-      <img src={ imagePath } alt={ `${title} cover` } />
-      <h4>{ title }</h4>
-      <h5>{ subtitle }</h5>
-      <p>{ storyline }</p>
-      <Rating rating={ rating } />
+    <div
+      className="flex flex-col justify-between border border-gray-400 m-2 border-solid w-72"
+    >
+      <img
+        className="w-full h-40"
+        src={ imagePath }
+        alt={ `${title} cover` }
+      />
+      <div className="space-y-4 h-72 p-5">
+        <h2 className="text-xl font-semibold">{ title }</h2>
+        <h3>{ subtitle }</h3>
+        <p className="text-sm text-justify">{ storyline }</p>
+      </div>
+      <div className="flex justify-end items-center h-10 px-3.5 bg-gray-500">
+        <Rating rating={ rating } />
+      </div>
     </div>
   );
 }
