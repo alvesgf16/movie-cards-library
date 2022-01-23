@@ -7,6 +7,5 @@ export default function Rating({ rating }) {
   );
 }
 
-Rating.propTypes = {
-  rating: PropTypes.number.isRequired,
-};
+Rating.propTypes = { rating: PropTypes.string };
+Rating.defaultProps = { rating: '' };

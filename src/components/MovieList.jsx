@@ -1,15 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import fetchApi from '../services/fetchApi';
 import MovieCard from './MovieCard';
 
-export default function MovieList({ movies }) {
- return (
+export default function MovieList() {
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    fetchApi(null, setMovies);
+  }, []);
+
+  return (
     <div className="flex flex-wrap pt-10 px-16 justify-center">
-      { movies.map((movie) => <MovieCard key={ movie.title } movie={ movie } />) }
+      { movies && movies.filter((_movie, index) => index < 5)
+        .map(({ id }) => <MovieCard key={ id } movieId={ id } />) }
     </div>
   );
 }
-
-MovieList.propTypes = {
-  movies: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
