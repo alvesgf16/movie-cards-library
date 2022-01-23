@@ -11,7 +11,7 @@ export default function MovieList() {
 
   return (
     <div className="flex flex-wrap pt-10 px-16 justify-center">
-      { movies && movies.filter((_movie, index) => index < 5)
+      { movies && movies.filter((_movie, index) => index < 10)
         .map(({ id }) => <MovieCard key={ id } movieId={ id } />) }
     </div>
   );
