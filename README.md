@@ -16,4 +16,4 @@ Uma biblioteca de cartões de filmes utilizando React.
     * `yarn`
 
   * Inicialize o projeto:
-    * `yarn start` (uma nova página deve abrir no seu navegador com um texto simples)
+    * `yarn build`
