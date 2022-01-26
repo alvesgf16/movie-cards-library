@@ -11,7 +11,7 @@ Uma biblioteca de cartões de filmes utilizando React.
   * Entre na pasta do repositório que você acabou de clonar:
     * `cd movie-cards-library`
 
-2. Instale as dependências, inicialize o projeto e rode os testes
+2. Instale as dependências e inicialize o projeto
   * Instale as dependências:
     * `yarn`
 
